@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:22:00 by mkadri            #+#    #+#             */
-/*   Updated: 2024/11/01 17:53:14 by mkadri           ###   ########.fr       */
+/*   Updated: 2024/11/29 13:23:58 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 int	main() {
 
-	ClapTrap	clapTrap_J("John");
-	ClapTrap	clapTrap_P("Peter");
+	ClapTrap	clapTrap_G("Goku");
+	ClapTrap	clapTrap_V("Vegeta");
 
-	clapTrap_J.attack("Bob");
-	clapTrap_J.setAttackDmg(4);
-	clapTrap_J.attack("Kevin");
-
-	std::cout << std::endl;
-	std::cout << "John hit points : " << clapTrap_J.getHitPts() << std::endl;
-	clapTrap_J.takeDamage(7);
-	std::cout << "John hit points : " << clapTrap_J.getHitPts() << std::endl;
-	clapTrap_J.beRepaired(4);
-	std::cout << "John hit points : " << clapTrap_J.getHitPts() << std::endl;
+	clapTrap_G.attack("Freezer");
+	clapTrap_G.setAttackDmg(4);
+	clapTrap_G.attack("Cell");
 
 	std::cout << std::endl;
-	clapTrap_J.takeDamage(11);
-	clapTrap_J.attack("Steven");
-	clapTrap_J.beRepaired(10);
+	std::cout << "Goku hit points : " << clapTrap_G.getHitPts() << std::endl;
+	clapTrap_G.takeDamage(7);
+	std::cout << "Goku hit points : " << clapTrap_G.getHitPts() << std::endl;
+	clapTrap_G.beRepaired(4);
+	std::cout << "Goku hit points : " << clapTrap_G.getHitPts() << std::endl;
 
 	std::cout << std::endl;
-	std::cout << "Peter energy points : " << clapTrap_P.getEnergyPts() << std::endl;
+	clapTrap_G.takeDamage(11);
+	clapTrap_G.attack("Buu");
+	clapTrap_G.beRepaired(10);
+
+	std::cout << std::endl;
+	std::cout << "Vegeta energy points : " << clapTrap_V.getEnergyPts() << std::endl;
 	for (int i = 0; i < 10; i++) {
-		clapTrap_P.attack("poor Richard");
+		clapTrap_V.attack("Zamasu");
 	}
 	std::cout << std::endl;
-	clapTrap_P.attack("random");
-	clapTrap_P.beRepaired(4);
+	clapTrap_V.attack("random");
+	clapTrap_V.beRepaired(4);
 
 	return 0;
 }
